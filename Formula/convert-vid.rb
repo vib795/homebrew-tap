@@ -8,45 +8,43 @@ class ConvertVid < Formula
   version "1.0.2"
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_darwin_arm64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  depends_on "ffmpeg" => :runtime
 
-      def install
-        bin.install "convert-video-formats" => "convert-vid"
-      end
-    end
+  on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_darwin_amd64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+      sha256 "ff0870c2480c15422b634a9b53eb449d23ed986294bb8d168a748131dc8b0228"
 
       def install
-        bin.install "convert-video-formats" => "convert-vid"
+        bin.install "convert-vid"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_darwin_arm64.tar.gz"
+      sha256 "ce30c2ac3b1847cf718094bd7d42aad20d0262be614cb3ad033529a09ecaba0c"
+
+      def install
+        bin.install "convert-vid"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_linux_arm64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_linux_amd64.tar.gz"
+      sha256 "53aae5efdcf539824a281fdcd53d9a11b802d4333cf5a482ab88bbd47719ca01"
       def install
-        bin.install "convert-video-formats" => "convert-vid"
+        bin.install "convert-vid"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_linux_amd64.tar.gz"
-      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_linux_arm64.tar.gz"
+      sha256 "5b3841bae8c11350623ee638d140bf248326e5fc4b57221d81a73627a24b479b"
       def install
-        bin.install "convert-video-formats" => "convert-vid"
+        bin.install "convert-vid"
       end
     end
   end
-
-  depends_on "ffmpeg"
 
   test do
     system "#{bin}/convert-vid", "version"
