@@ -10,7 +10,7 @@ class ConvertVid < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video_formats_1.0.0_Darwin_arm64.tar.gz"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video-formats_1.0.0_Darwin_arm64.tar.gz"
       sha256 ""
 
       def install
@@ -18,7 +18,7 @@ class ConvertVid < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video_formats_1.0.0_Darwin_x86_64.tar.gz"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video-formats_1.0.0_Darwin_x86_64.tar.gz"
       sha256 ""
 
       def install
@@ -29,7 +29,7 @@ class ConvertVid < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video_formats_1.0.0_Linux_arm64.tar.gz"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video-formats_1.0.0_Linux_arm64.tar.gz"
       sha256 ""
 
       def install
@@ -37,7 +37,7 @@ class ConvertVid < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video_formats_1.0.0_Linux_x86_64.tar.gz"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.0/convert-video-formats_1.0.0_Linux_x86_64.tar.gz"
       sha256 ""
 
       def install
