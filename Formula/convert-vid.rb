@@ -14,7 +14,7 @@ class ConvertVid < Formula
       sha256 "158ffe3cdce3a40b1816ce68ccdfa3cf3b14fe44c5684c8cc73120b80ddae4d2"
 
       def install
-        bin.install "convert-vid"
+        bin.install "convert-video-formats" => "convert-vid"
       end
     end
     if Hardware::CPU.intel?
@@ -22,7 +22,7 @@ class ConvertVid < Formula
       sha256 "aec45ad5d759525ed13b9275e21a39374d4efbf83416559a783ce0072ccbd73f"
 
       def install
-        bin.install "convert-vid"
+        bin.install "convert-video-formats" => "convert-vid"
       end
     end
   end
@@ -33,7 +33,7 @@ class ConvertVid < Formula
       sha256 "c663064a04fa2accc8a579f50e8abd851d7486fca36697d5fb61b13b994601bc"
 
       def install
-        bin.install "convert-vid"
+        bin.install "convert-video-formats" => "convert-vid"
       end
     end
     if Hardware::CPU.intel?
@@ -41,7 +41,7 @@ class ConvertVid < Formula
       sha256 "382486734c0123d9ceb4b5d36278ba5a616d591c407748c6210db0df566bbc06"
 
       def install
-        bin.install "convert-vid"
+        bin.install "convert-video-formats" => "convert-vid"
       end
     end
   end
