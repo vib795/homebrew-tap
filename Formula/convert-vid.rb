@@ -5,21 +5,21 @@
 class ConvertVid < Formula
   desc "A fast CLI tool for converting video files between different formats"
   homepage "https://github.com/vib795/convert-video-formats"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.1/convert-video-formats_1.0.1_darwin_arm64.tar.gz"
-      sha256 "158ffe3cdce3a40b1816ce68ccdfa3cf3b14fe44c5684c8cc73120b80ddae4d2"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_darwin_arm64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "convert-video-formats" => "convert-vid"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.1/convert-video-formats_1.0.1_darwin_amd64.tar.gz"
-      sha256 "aec45ad5d759525ed13b9275e21a39374d4efbf83416559a783ce0072ccbd73f"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_darwin_amd64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "convert-video-formats" => "convert-vid"
@@ -29,16 +29,16 @@ class ConvertVid < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.1/convert-video-formats_1.0.1_linux_arm64.tar.gz"
-      sha256 "c663064a04fa2accc8a579f50e8abd851d7486fca36697d5fb61b13b994601bc"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_linux_arm64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "convert-video-formats" => "convert-vid"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.1/convert-video-formats_1.0.1_linux_amd64.tar.gz"
-      sha256 "382486734c0123d9ceb4b5d36278ba5a616d591c407748c6210db0df566bbc06"
+      url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.2/convert-video-formats_1.0.2_linux_amd64.tar.gz"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
       def install
         bin.install "convert-video-formats" => "convert-vid"
