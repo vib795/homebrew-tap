@@ -8,28 +8,27 @@ class PullVids < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.0/pull-vids-darwin-arm64.tar.gz"
-      sha256 "710d1e1d3cec52d8a63f217b158d9ce3b1dadf24f537e9eec61391ae95047c2d"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.2.1/pull-vids-darwin-arm64.tar.gz"
+      sha256 "8627005f39d48ce09fc6d5bfe4ffed08e2ff255a6e9501c3a3d8ae5d104d64cc"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.0/pull-vids-darwin-amd64.tar.gz"
-      sha256 "840e34c090cd9faff70a2c7afd0607c0efc6e0eb7f1088e70955e7af40e7c17c"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.2.1/pull-vids-darwin-amd64.tar.gz"
+      sha256 "fa9ee3380fb2c45f177026afe1e8dbfd18f0c163d2713a85a8c644d7ec4b494d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.0/pull-vids-linux-arm64.tar.gz"
-      sha256 "72839942b54bee8c74b2691e78fae00a6fb704c5e44af4d80b8c04dff91dbac6"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.2.1/pull-vids-linux-arm64.tar.gz"
+      sha256 "a25abf2d80bd2bb30bdaa4af1a7027191af90478e0a1c20d49d6c7268aa20228"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.0/pull-vids-linux-amd64.tar.gz"
-      sha256 "aed88f543f74c4f9459a8f8d61857eaf520c0e100c8e1e8d9e37577478ae9e1b"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.2.1/pull-vids-linux-amd64.tar.gz"
+      sha256 "65472428d552cf8414b221484f49763df6dc11a06dc846a0775c57aa365dab1f"
     end
   end
 
   def install
-    # Determine the correct binary name based on platform and architecture
     binary_name = if OS.mac?
       Hardware::CPU.arm? ? "pull-vids-darwin-arm64" : "pull-vids-darwin-amd64"
     else
@@ -40,11 +39,9 @@ class PullVids < Formula
   end
 
   test do
-    # Test version output
     version_output = shell_output("#{bin}/pull-vids --version")
     assert_match "pull-vids", version_output
 
-    # Test help output
     help_output = shell_output("#{bin}/pull-vids --help 2>&1")
     assert_match "Universal Video Downloader", help_output
     assert_match "Supports 1000+ sites", help_output
