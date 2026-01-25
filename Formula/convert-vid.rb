@@ -45,6 +45,18 @@ class ConvertVid < Formula
       end
     end
   end
+  
+  def caveats
+    <<~EOS
+      convert-vid requires ffmpeg with AV1 decoder support.
+
+      If you encounter "exit status 69" errors when converting videos,
+      your ffmpeg may need to be reinstalled:
+        brew reinstall ffmpeg
+
+      This ensures libdav1d (AV1 decoder) is properly installed.
+    EOS
+  end
 
   test do
     system "#{bin}/convert-vid", "version"
