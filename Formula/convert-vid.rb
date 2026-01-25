@@ -13,7 +13,7 @@ class ConvertVid < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_darwin_amd64.tar.gz"
-      sha256 "4f25cb5ae57bbbe199ce7c2836853e343ee3d9484ff795dca3587625d0c6bd70"
+      sha256 "a9848c0a43b948b2c4faeb7a0035f56d4c9522c89965573f53899dcf56e6f4cf"
 
       def install
         bin.install "convert-vid"
@@ -21,7 +21,7 @@ class ConvertVid < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_darwin_arm64.tar.gz"
-      sha256 "e2784fb427b921fb3de811213379c4f55a9c6ca520dab2d2601acfe9e2bba187"
+      sha256 "6c51a604441d1d9e8b8f52fbf4d717edf6d153ef0e33d68121300b8a5ea165f3"
 
       def install
         bin.install "convert-vid"
@@ -32,14 +32,14 @@ class ConvertVid < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_linux_amd64.tar.gz"
-      sha256 "09b898a1420876eb1a769c04e79524106d37fa4fd716310ded5da90e4f6138b2"
+      sha256 "9f42b1ec9676622c067504bb0a2d62a1256fedffa373a8a568a9a2b992010fcb"
       def install
         bin.install "convert-vid"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_linux_arm64.tar.gz"
-      sha256 "3257f1ccaf11ed3995149f28bd7ad67495ccb96b28d69a0380017d883d3e4c28"
+      sha256 "cfd95729cad248c3a194731f1a4ea3bda4df4c4142c7deb901a81c65ff763a37"
       def install
         bin.install "convert-vid"
       end
