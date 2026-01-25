@@ -13,7 +13,7 @@ class ConvertVid < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_darwin_amd64.tar.gz"
-      sha256 "beacc24736fbf173bf8d7bd5f4259e0692760879463ab9f4eab8bfb3e0482f23"
+      sha256 "4f25cb5ae57bbbe199ce7c2836853e343ee3d9484ff795dca3587625d0c6bd70"
 
       def install
         bin.install "convert-vid"
@@ -21,7 +21,7 @@ class ConvertVid < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_darwin_arm64.tar.gz"
-      sha256 "12f325e913cb16976df34595b27e685f4d192476a60655ff334d2597ad8e38bb"
+      sha256 "e2784fb427b921fb3de811213379c4f55a9c6ca520dab2d2601acfe9e2bba187"
 
       def install
         bin.install "convert-vid"
@@ -32,32 +32,19 @@ class ConvertVid < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_linux_amd64.tar.gz"
-      sha256 "310084974e1a8699e0bc0c9e6007a5ee9b8368afba0ea11894a672180895ae59"
+      sha256 "09b898a1420876eb1a769c04e79524106d37fa4fd716310ded5da90e4f6138b2"
       def install
         bin.install "convert-vid"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vib795/convert-video-formats/releases/download/v1.0.15/convert-video-formats_1.0.15_linux_arm64.tar.gz"
-      sha256 "84cf6d47ad2ea973c90ff752befe204ca2c4275e9f10d240a9119551617d382d"
+      sha256 "3257f1ccaf11ed3995149f28bd7ad67495ccb96b28d69a0380017d883d3e4c28"
       def install
         bin.install "convert-vid"
       end
     end
   end
-  
-  def caveats
-    <<~EOS
-      convert-vid requires ffmpeg with AV1 decoder support.
-
-      If you encounter "exit status 69" errors when converting videos,
-      your ffmpeg may need to be reinstalled:
-        brew reinstall ffmpeg
-
-      This ensures libdav1d (AV1 decoder) is properly installed.
-    EOS
-  end
-
 
   test do
     system "#{bin}/convert-vid", "version"
