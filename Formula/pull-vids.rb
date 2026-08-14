@@ -3,28 +3,33 @@ class PullVids < Formula
   homepage "https://github.com/vib795/pull-vids"
   license "MIT"
 
+  # aria2 powers the parallel-connection downloader. Google's CDN
+  # throttles each TCP connection independently, so without it
+  # pull-vids falls back to the native downloader and only
+  # parallelises formats that are already fragmented.
+  depends_on "aria2"
   depends_on "ffmpeg"
   depends_on "yt-dlp"
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.3/pull-vids-darwin-arm64.tar.gz"
-      sha256 "ba22f15ff8e6546c8f684ca57791fcfa75bb1204f266bfd2eb67071da46b6b7a"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.0/pull-vids-darwin-arm64.tar.gz"
+      sha256 "c33b62396036a2e5626200f9f0fd1acc2dcf79ad5da12f401e284af3bd6d4aff"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.3/pull-vids-darwin-amd64.tar.gz"
-      sha256 "43e62ee8f05b42932b5ddc24de5b9c695f2831ba5498eacc7f072cfe249042c4"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.0/pull-vids-darwin-amd64.tar.gz"
+      sha256 "4d12bc6090c147b6d9883fe4d1096e766ddf3f2941742758773ad464ea9b887e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.3/pull-vids-linux-arm64.tar.gz"
-      sha256 "05ef54564d8afa6e562b29c664949dffa75227c300afcb2488c8e3d285e13895"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.0/pull-vids-linux-arm64.tar.gz"
+      sha256 "031a1390a68eea53b54c0547fe0c8b28c3daa59424f41094404262ee18457854"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.2.3/pull-vids-linux-amd64.tar.gz"
-      sha256 "becc97d9108de04b6e31d28906e04ecfa969f37416da279d8b3096aba7bfbeba"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.0/pull-vids-linux-amd64.tar.gz"
+      sha256 "16330b7c452c50efefeb853fe5a17a052425090995c670a67f4e7281dac0dfac"
     end
   end
 
