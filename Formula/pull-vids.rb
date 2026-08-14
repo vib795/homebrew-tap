@@ -6,7 +6,7 @@ class PullVids < Formula
   # from the download URL, and "pull-vids-darwin-arm64.tar.gz" yields
   # "64" — identical for every release, so `brew upgrade` sees no new
   # version and never replaces the installed binary.
-  version "0.3.3"
+  version "0.3.4"
 
   # aria2 powers the parallel-connection downloader. Google's CDN
   # throttles each TCP connection independently, so without it
@@ -18,23 +18,23 @@ class PullVids < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.3/pull-vids-darwin-arm64.tar.gz"
-      sha256 "d30c5d125a41be1ec6cd9bcb1f8c2bd6047e445b89594a3c1e2e0b328daae03a"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.4/pull-vids-darwin-arm64.tar.gz"
+      sha256 "1222ef47788b874161fcd48cdc990f9efb0db4f160f6ea22c5bca119900e4306"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.3/pull-vids-darwin-amd64.tar.gz"
-      sha256 "2eafa4b45e9251027c47541bc0947b1f70cbd8ab5e324be46df418a6323c5836"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.4/pull-vids-darwin-amd64.tar.gz"
+      sha256 "83194a8a8ab73038ddd38bfb94060f68e67da3dd313da554cb0805616ea34084"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.3/pull-vids-linux-arm64.tar.gz"
-      sha256 "f91f0bd7d0064102a2dbf76babee673eb88cb249c2161de7d40334c38f4f0dde"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.4/pull-vids-linux-arm64.tar.gz"
+      sha256 "5e2df819aeea06806f28229af6cfcfbf95a7b3bef8d43b2724bb5356a51deeba"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.3/pull-vids-linux-amd64.tar.gz"
-      sha256 "ea6338787d82e07bb557b7613803a259c540fb436c21fdcb8417079d574410d5"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.3.4/pull-vids-linux-amd64.tar.gz"
+      sha256 "20d9ea85dc9b1cb8cc87fe7e12988449b06a1a1a34e3a48ee0389ec621e67e13"
     end
   end
 
