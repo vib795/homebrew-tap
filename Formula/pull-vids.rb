@@ -6,7 +6,7 @@ class PullVids < Formula
   # from the download URL, and "pull-vids-darwin-arm64.tar.gz" yields
   # "64" — identical for every release, so `brew upgrade` sees no new
   # version and never replaces the installed binary.
-  version "0.3.5"
+  version "0.4.0"
 
   # aria2 powers the parallel-connection downloader. Google's CDN
   # throttles each TCP connection independently, so without it
@@ -18,23 +18,23 @@ class PullVids < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.5/pull-vids-darwin-arm64.tar.gz"
-      sha256 "14b728407944c42819281115b778856166225ac5452fce09b89e0b67ae107a84"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.4.0/pull-vids-darwin-arm64.tar.gz"
+      sha256 "2ee8d49b692b0cf8a80a257804e71f800481b865cc2059206035dbfe8d20b51f"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.5/pull-vids-darwin-amd64.tar.gz"
-      sha256 "ba4d2574eecbadeec5b8158ffb9a244c028c9b6f67363c88f31c8872df3f16d5"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.4.0/pull-vids-darwin-amd64.tar.gz"
+      sha256 "b434d0fdf7b5d1a188352ffdb3ca05ef80f277fb835c4fac66ea10a2bd0ddd25"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.5/pull-vids-linux-arm64.tar.gz"
-      sha256 "0f941d02bff93c564dc6c55d7fc2d3548cbda8e0e52a302aaee24d74bf143fca"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.4.0/pull-vids-linux-arm64.tar.gz"
+      sha256 "2c6698be45ea102cf5793f618e7dc3f8c92486c1b671ca46b7591fa8bafb6b5f"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.3.5/pull-vids-linux-amd64.tar.gz"
-      sha256 "1dc220d2fa3f53b9cc6d588b6365c45f72d688ecde128e30b169a1c74a4a1e57"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.4.0/pull-vids-linux-amd64.tar.gz"
+      sha256 "aa1954dc5dced83db5fa97c812ec3e4ccd4ebbe89ff3646c7fbde37cb36e7a88"
     end
   end
 
