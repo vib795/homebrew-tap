@@ -6,7 +6,7 @@ class PullVids < Formula
   # from the download URL, and "pull-vids-darwin-arm64.tar.gz" yields
   # "64" — identical for every release, so `brew upgrade` sees no new
   # version and never replaces the installed binary.
-  version "0.5.0"
+  version "0.5.1"
 
   # aria2 is deliberately not a dependency. pull-vids only uses it
   # when asked with --downloader aria2c, because the native
@@ -16,23 +16,23 @@ class PullVids < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-darwin-arm64.tar.gz"
-      sha256 "cf69d784d841ae551bec83bbfd0a520070fa87167799cf3cb031d68530bbb6a9"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-darwin-arm64.tar.gz"
+      sha256 "01e2cea8aa0229e940571361083a42831a4398fe15c5129c27b121d527d7c886"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-darwin-amd64.tar.gz"
-      sha256 "a89132fe7e57ca847d42dc8feaa0757bc763a70788cac4cfed70bfdf197f9a57"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-darwin-amd64.tar.gz"
+      sha256 "ade530cde5f5f2d286c9b03d119836b70ddc923b65e1ac0efbdd3c92fa22ec62"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-linux-arm64.tar.gz"
-      sha256 "cca7b36fb2328f34827ee2830160783b843d3a7eb2b949043d88e8451d4fefef"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-linux-arm64.tar.gz"
+      sha256 "d89933191e3c2612db89662941a166f42295f590148125c7a7ab2d633755d627"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-linux-amd64.tar.gz"
-      sha256 "ab11e6ac4f10830b7699dc918fe7745b9f216052457784f29cf053dfdabf23bb"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-linux-amd64.tar.gz"
+      sha256 "85bca506846679d6c3f817edd1a8f8eadc5178b53a800edde174230ab17c69ba"
     end
   end
 
