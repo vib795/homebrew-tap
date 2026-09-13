@@ -6,35 +6,33 @@ class PullVids < Formula
   # from the download URL, and "pull-vids-darwin-arm64.tar.gz" yields
   # "64" — identical for every release, so `brew upgrade` sees no new
   # version and never replaces the installed binary.
-  version "0.4.1"
+  version "0.5.0"
 
-  # aria2 powers the parallel-connection downloader. Google's CDN
-  # throttles each TCP connection independently, so without it
-  # pull-vids falls back to the native downloader and only
-  # parallelises formats that are already fragmented.
-  depends_on "aria2"
+  # aria2 is deliberately not a dependency. pull-vids only uses it
+  # when asked with --downloader aria2c, because the native
+  # downloader measured faster on YouTube.
   depends_on "ffmpeg"
   depends_on "yt-dlp"
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.4.1/pull-vids-darwin-arm64.tar.gz"
-      sha256 "e09c020b8372203a9e088baca97fae69b2f07b0aec471100cbfed78bf05c3c5f"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-darwin-arm64.tar.gz"
+      sha256 "cf69d784d841ae551bec83bbfd0a520070fa87167799cf3cb031d68530bbb6a9"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.4.1/pull-vids-darwin-amd64.tar.gz"
-      sha256 "0c8183b78d8bd2c25ea5dc451d7d043346d855625eabfa7c5b40a15cc5819308"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-darwin-amd64.tar.gz"
+      sha256 "a89132fe7e57ca847d42dc8feaa0757bc763a70788cac4cfed70bfdf197f9a57"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.4.1/pull-vids-linux-arm64.tar.gz"
-      sha256 "2d04844dc3d7e0c94b188ca32ff39bf7629ad1a9234f7fff4618e4bfa7b51f18"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-linux-arm64.tar.gz"
+      sha256 "cca7b36fb2328f34827ee2830160783b843d3a7eb2b949043d88e8451d4fefef"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.4.1/pull-vids-linux-amd64.tar.gz"
-      sha256 "3470cbc8312546b93828769799af20fc4aecacbc2078bdfba6e6933b900935e1"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.0/pull-vids-linux-amd64.tar.gz"
+      sha256 "ab11e6ac4f10830b7699dc918fe7745b9f216052457784f29cf053dfdabf23bb"
     end
   end
 
