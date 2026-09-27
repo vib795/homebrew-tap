@@ -6,7 +6,7 @@ class PullVids < Formula
   # from the download URL, and "pull-vids-darwin-arm64.tar.gz" yields
   # "64" — identical for every release, so `brew upgrade` sees no new
   # version and never replaces the installed binary.
-  version "0.5.1"
+  version "0.5.2"
 
   # aria2 is deliberately not a dependency. pull-vids only uses it
   # when asked with --downloader aria2c, because the native
@@ -16,23 +16,23 @@ class PullVids < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-darwin-arm64.tar.gz"
-      sha256 "01e2cea8aa0229e940571361083a42831a4398fe15c5129c27b121d527d7c886"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.2/pull-vids-darwin-arm64.tar.gz"
+      sha256 "24ece3e76dcb1d219851b639cc88b47f69802486fda0bba31d45571a782757e2"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-darwin-amd64.tar.gz"
-      sha256 "ade530cde5f5f2d286c9b03d119836b70ddc923b65e1ac0efbdd3c92fa22ec62"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.2/pull-vids-darwin-amd64.tar.gz"
+      sha256 "2c98759305eb81b88b171e62e77f54f7a787726075a0f4a2ce370785d0383b12"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-linux-arm64.tar.gz"
-      sha256 "d89933191e3c2612db89662941a166f42295f590148125c7a7ab2d633755d627"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.2/pull-vids-linux-arm64.tar.gz"
+      sha256 "62f7b0ab719e8129ed230379ddccf9705c2e39add4d4b59abca60bea7f16969b"
     end
     on_intel do
-      url "https://github.com/vib795/pull-vids/releases/download/v0.5.1/pull-vids-linux-amd64.tar.gz"
-      sha256 "85bca506846679d6c3f817edd1a8f8eadc5178b53a800edde174230ab17c69ba"
+      url "https://github.com/vib795/pull-vids/releases/download/v0.5.2/pull-vids-linux-amd64.tar.gz"
+      sha256 "82576a92967a48e16b6dd1620f81bda8085776c911f15d662825dd97b6dce8ea"
     end
   end
 
